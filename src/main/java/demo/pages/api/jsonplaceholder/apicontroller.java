@@ -8,8 +8,7 @@ import io.restassured.response.Response;
 
 public class apicontroller {
 
-  public Response getResponse(String responseBody) {
-    pokemonName = pokemonName.toLowerCase();
+  public Response getResponseBody() {
     Response response = given().baseUri("https://jsonplaceholder.typicode.com").basePath("/posts")
         .log().all()
         .contentType(ContentType.JSON)
