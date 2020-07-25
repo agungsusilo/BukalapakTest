@@ -10,7 +10,7 @@ public class apicontroller {
 
   public Response getPokemonData(String pokemonName) {
     pokemonName = pokemonName.toLowerCase();
-    Response response = given().baseUri("https://jsonplaceholder.typicode.com").basePath("/api")
+    Response response = given().baseUri("https://jsonplaceholder.typicode.com").basePath("/posts")
         .log().all()
         .contentType(ContentType.JSON)
         .accept(ContentType.JSON).get("/posts/{userId}");
